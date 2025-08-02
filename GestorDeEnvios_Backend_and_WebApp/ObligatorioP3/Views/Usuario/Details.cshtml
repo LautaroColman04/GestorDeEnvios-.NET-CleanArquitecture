@@ -1,0 +1,64 @@
+﻿@model DTOs.DTOs.DTOsUsuario.DTOUsuario
+@{
+    ViewData["Title"] = "Detalle de Usuario";
+}
+
+<section class="min-h-screen bg-gray-50 px-4 py-16">
+    <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-md">
+        <h1 class="text-2xl font-bold text-indigo-700 mb-6 text-center">📄 Detalle del Usuario</h1>
+
+        @if (!string.IsNullOrEmpty(ViewBag.msg as string))
+        {
+            <div class="text-green-600 text-center font-medium mb-4">
+                @ViewBag.msg
+            </div>
+        }
+
+        <dl class="space-y-4 text-sm text-gray-700">
+            <div>
+                <dt class="font-semibold text-indigo-600">📧 Email</dt>
+                <dd class="mt-1">@Model.Email</dd>
+            </div>
+
+            <div>
+                <dt class="font-semibold text-indigo-600">🆔 ID</dt>
+                <dd class="mt-1">@Model.Id</dd>
+            </div>
+
+            <div>
+                <dt class="font-semibold text-indigo-600">🧑 Nombre</dt>
+                <dd class="mt-1">@Model.Nombre</dd>
+            </div>
+
+            <div>
+                <dt class="font-semibold text-indigo-600">🧑 Apellido</dt>
+                <dd class="mt-1">@Model.Apellido</dd>
+            </div>
+
+            <div>
+                <dt class="font-semibold text-indigo-600">🛡️ Rol</dt>
+                <dd class="mt-1">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold
+                        @(
+                            Model.Rol.ToUpper() == "ADMINISTRADOR" ? "bg-red-100 text-red-800" :
+                            Model.Rol.ToUpper() == "FUNCIONARIO" ? "bg-indigo-100 text-indigo-800" :
+                            "bg-green-100 text-green-800"
+                        )">
+                        @Model.Rol
+                    </span>
+                </dd>
+            </div>
+        </dl>
+
+        <div class="mt-8 flex justify-center gap-4">
+            <a asp-action="Edit" asp-route-id="@Model.Id"
+               class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-md shadow transition font-medium">
+                ✏️ Editar
+            </a>
+            <a asp-action="Listar"
+               class="bg-gray-700 hover:bg-gray-800 text-white px-5 py-2 rounded-md shadow transition font-medium">
+                ← Volver
+            </a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,114 @@
+﻿@model DTOs.DTOs.DTOsEnvio.DTOCreateEnvio
+
+@{
+    ViewData["Title"] = "Registrar Envío";
+}
+
+<section class="min-h-screen bg-gray-50 px-4 py-16">
+    <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-md">
+        <h1 class="text-2xl font-bold text-indigo-700 mb-6 text-center">📦 Registrar Nuevo Envío</h1>
+
+        @if (!string.IsNullOrEmpty(ViewBag.msg as string))
+        {
+            <div class="bg-green-100 text-green-700 px-4 py-3 rounded-md mb-4 text-sm text-center shadow">
+                @ViewBag.msg
+            </div>
+        }
+
+        <form asp-action="Create" class="space-y-6">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm"></div>
+
+            <!-- Tipo de Envío -->
+            <div>
+                <label asp-for="TipoEnvio" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Envío</label>
+                <select asp-for="TipoEnvio" id="TipoEnvio"
+                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-indigo-500">
+                    <option value="URGENTE">URGENTE</option>
+                    <option value="COMUN">COMÚN</option>
+                </select>
+                <span asp-validation-for="TipoEnvio" class="text-red-500 text-sm"></span>
+            </div>
+
+            <!-- Cliente -->
+            <div>
+                <label asp-for="ClienteEmail" class="block text-sm font-medium text-gray-700 mb-1">Email del Cliente</label>
+                <input asp-for="ClienteEmail"
+                       class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-indigo-500" />
+                <span asp-validation-for="ClienteEmail" class="text-red-500 text-sm"></span>
+            </div>
+
+            <!-- Agencia -->
+            <div id="campo-agencia">
+                <label asp-for="AgenciaId" class="block text-sm font-medium text-gray-700 mb-1">ID de Agencia</label>
+                <input asp-for="AgenciaId"
+                       class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-indigo-500" />
+                <span asp-validation-for="AgenciaId" class="text-red-500 text-sm"></span>
+            </div>
+
+            <!-- Dirección -->
+            <div id="campo-direccion">
+                <label asp-for="DireccionPostal" class="block text-sm font-medium text-gray-700 mb-1">Dirección Postal</label>
+                <input asp-for="DireccionPostal"
+                       class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-indigo-500" />
+                <span asp-validation-for="DireccionPostal" class="text-red-500 text-sm"></span>
+            </div>
+
+            <!-- Peso -->
+            <div>
+                <label asp-for="Peso" class="block text-sm font-medium text-gray-700 mb-1">Peso</label>
+                <input asp-for="Peso"
+                       class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-indigo-500" />
+                <span asp-validation-for="Peso" class="text-red-500 text-sm"></span>
+            </div>
+
+            <!-- Submit -->
+            <div class="text-center">
+                <input type="submit"
+                       value="Registrar Envío"
+                       class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-md font-medium shadow transition" />
+            </div>
+        </form>
+
+        <!-- Acciones -->
+        <div class="mt-6 flex justify-center gap-4">
+            <a asp-action="Index"
+               class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md transition font-medium">
+                ← Volver al Listado
+            </a>
+            <a asp-controller="Usuario" asp-action="Index"
+               class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition font-medium">
+                Ir al Inicio
+            </a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Función que actualiza la visibilidad de los campos según selección
+        function toggleCampos() {
+            const tipoEnvio = document.getElementById('TipoEnvio').value;
+            const campoAgencia = document.getElementById('campo-agencia');
+            const campoDireccion = document.getElementById('campo-direccion');
+
+            if (tipoEnvio === 'URGENTE') {
+                campoAgencia.style.display = 'none';
+                campoDireccion.style.display = 'block';
+            } else if (tipoEnvio === 'COMUN') {
+                campoAgencia.style.display = 'block';
+                campoDireccion.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleCampos(); // inicializa visibilidad
+
+            // Actualiza visibilidad al cambiar select
+            document.getElementById('TipoEnvio').addEventListener('change', toggleCampos);
+        });
+    </script>
+}

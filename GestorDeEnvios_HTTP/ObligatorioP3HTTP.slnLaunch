@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "ObligatorioWebApi\\ObligatorioWebApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ClienteHTTP\\ClienteHTTP.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

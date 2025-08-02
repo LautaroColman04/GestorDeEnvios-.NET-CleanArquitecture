@@ -1,0 +1,56 @@
+﻿@model DTOs.DTOs.DTOsUsuario.DTOUsuario
+
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<section class="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 px-4 py-16 flex items-center justify-center">
+    <div class="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
+        <h1 class="text-2xl font-bold text-indigo-700 mb-6 text-center">🔐 Iniciar Sesión</h1>
+
+        @if (!string.IsNullOrEmpty(ViewBag.error as string))
+        {
+            <div class="bg-red-100 text-red-700 px-4 py-3 rounded-md mb-4 text-sm text-center shadow">
+                @ViewBag.error
+            </div>
+        }
+
+        <form asp-action="Login" class="space-y-6">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm"></div>
+
+            <!-- Email -->
+            <div>
+                <label asp-for="Email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input asp-for="Email" type="email"
+                       class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-indigo-500" />
+                <span asp-validation-for="Email" class="text-red-500 text-sm"></span>
+            </div>
+
+            <!-- Password -->
+            <div>
+                <label asp-for="Password" class="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
+                <input asp-for="Password" type="password"
+                       class="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-indigo-500" />
+                <span asp-validation-for="Password" class="text-red-500 text-sm"></span>
+            </div>
+
+            <div class="text-center">
+                <input type="submit" value="Ingresar"
+                       class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-md font-medium shadow transition" />
+            </div>
+        </form>
+
+        <div class="mt-6 text-center">
+            <a href="@Url.Action("Index", "Home")"
+               class="inline-block bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-md transition font-medium">
+                ← Volver
+            </a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
