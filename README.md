@@ -1,4 +1,4 @@
-# GestorDeEnvios-.NET-CleanArquitecture-DDD-EntityFramework-JWT-
+# GestorDeEnvios-.NET
 
 Url HTTP Cliente: 
 https://clientehttpp3lc-arbdffgba7fkg4ea.brazilsouth01.azurewebsites.net
