@@ -1,4 +1,4 @@
-# GestorDeEnvios-.NET (Prototipo)
+# GestorDeEnvios-.NET (Prototipo funcional)
 
 Url HTTP Cliente: 
 https://clientehttpp3lc-arbdffgba7fkg4ea.brazilsouth-01.azurewebsites.net/
