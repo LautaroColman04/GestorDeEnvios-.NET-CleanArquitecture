@@ -27,43 +27,43 @@ Este proyecto es una aplicación web desarrollada en ASP.NET Core Razor Pages (.
 Características principales
 
 	Gestión de Envíos:
-•	Creación de envíos (con soporte para diferentes tipos y agencias).
-•	Listado general y filtrado de envíos en proceso.
-•	Visualización de detalles y finalización de envíos.
+	-Creación de envíos (con soporte para diferentes tipos y agencias).
+	-Listado general y filtrado de envíos en proceso.
+	-Visualización de detalles y finalización de envíos.
 
 	Seguimiento de Envíos:
-•	Agregado de comentarios y seguimientos a cada envío.
-•	Visualización del historial de seguimiento.
+	-Agregado de comentarios y seguimientos a cada envío.
+	-Visualización del historial de seguimiento.
 
 	Autenticación y Autorización:
-•	Inicio de sesión de usuarios.
-•	Control de acceso a funcionalidades según el rol y estado de autenticación.
+	-Inicio de sesión de usuarios.
+	-Control de acceso a funcionalidades según el rol y estado de autenticación.
 
 	Auditoría:
-•	Registro de acciones relevantes (altas, errores, finalizaciones) para trazabilidad y control.
+	-Registro de acciones relevantes (altas, errores, finalizaciones) para trazabilidad y control.
 
 	Arquitectura en Capas:
-•	Separación clara entre lógica de aplicación, lógica de negocio, acceso a datos y presentación.
-•	Uso de DTOs y mapeadores para desacoplar las capas.
+	-Separación clara entre lógica de aplicación, lógica de negocio, acceso a datos y presentación.
+	-Uso de DTOs y mapeadores para desacoplar las capas.
 
 	Interfaz:
-•	Vistas Razor Pages con estilos modernos y mensajes de feedback para el usuario.
+	Vistas Razor Pages con estilos modernos y mensajes de feedback para el usuario.
 
 Tecnologías utilizadas
-•	.NET 8 / C# 12
-•	ASP.NET Core Razor Pages
-•	Entity Framework Core
-•	Autenticación JWT (para la API)
-•	Patrón Repository y Unit of Work
-•	DTOs y AutoMapper
-•	Tailwind CSS (opcional, según estilos en las vistas)
+	-.NET 8 / C# 12
+	-ASP.NET Core Razor Pages
+	-Entity Framework Core
+	-Autenticación JWT (para la API)
+	-Patrón Repository y Unit of Work
+	-DTOs y AutoMapper
+	-Tailwind CSS (opcional, según estilos en las vistas)
 
 Estructura del Proyecto
-•	LogicaNegocio: Entidades y lógica de negocio.
-•	LogicaAccesoDatos: Repositorios y acceso a datos.
-•	LogicaAplicacion: Casos de uso y servicios de aplicación.
-•	ObligatorioP3: Proyecto web Razor Pages.
-•	ObligatorioWebApi: API RESTful para integración externa.
+	-LogicaNegocio: Entidades y lógica de negocio.
+	-LogicaAccesoDatos: Repositorios y acceso a datos.
+	-LogicaAplicacion: Casos de uso y servicios de aplicación.
+	-ObligatorioP3: Proyecto web Razor Pages.
+	-ObligatorioWebApi: API RESTful para integración externa.
 
 Cómo ejecutar
 1.	Clona el repositorio.
