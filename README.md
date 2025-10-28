@@ -68,7 +68,7 @@ Tecnologías utilizadas
 	-Entity Framework Core  
 	-Autenticación JWT (para la API)  
 	-Patrón Repository y Unit of Work  
-	-DTOs y AutoMapper  
+	-DTOs y Mapper  
 	-Tailwind CSS (opcional, según estilos en las vistas)    
 
 Estructura del Proyecto  
