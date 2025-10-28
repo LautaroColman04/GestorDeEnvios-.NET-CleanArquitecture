@@ -26,10 +26,22 @@ Este proyecto es una aplicación web desarrollada en ASP.NET Core Razor Pages (.
 
 Características principales
 
-	Gestión de Envíos:
+	Buscar Envio por Numero de Tracking (ANONIMO):
+	-Cualquiera que entre puede buscar un pedido sin iniciar sesion si cuenta con el numero de tracking.
+	
+	Gestión de Envíos (Rol ADMINISTRADOR / FUNCIONARIO):
 	-Creación de envíos (con soporte para diferentes tipos y agencias).
-	-Listado general y filtrado de envíos en proceso.
+	-Listado general y filtrado de envíos.
 	-Visualización de detalles y finalización de envíos.
+
+	Gestión de Usuarios (Rol ADMINISTRADOR):
+	-El Admin podra dar de alta un usuario, editar sus datos, y darlo de baja.
+	-Listado general y filtrado de Usuarios.
+	-Visualización de detalles de usuario.
+
+	Visualizacion de envios propios (Rol CLIENTE):
+	-Listado general y filtrado de envíos.
+	-Visualización de detalles
 
 	Seguimiento de Envíos:
 	-Agregado de comentarios y seguimientos a cada envío.
