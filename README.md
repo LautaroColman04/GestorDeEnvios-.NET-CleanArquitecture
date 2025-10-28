@@ -46,7 +46,7 @@ Características principales
 •	Separación clara entre lógica de aplicación, lógica de negocio, acceso a datos y presentación.
 •	Uso de DTOs y mapeadores para desacoplar las capas.
 
-	Interfaz Moderna:
+	Interfaz:
 •	Vistas Razor Pages con estilos modernos y mensajes de feedback para el usuario.
 
 Tecnologías utilizadas
