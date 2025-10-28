@@ -61,24 +61,25 @@ Características principales
 	Interfaz:
 	Vistas Razor Pages con estilos modernos y mensajes de feedback para el usuario.
 
-Tecnologías utilizadas
-	-.NET 8 / C# 12
-	-ASP.NET Core Razor Pages
-	-Entity Framework Core
-	-Autenticación JWT (para la API)
-	-Patrón Repository y Unit of Work
-	-DTOs y AutoMapper
-	-Tailwind CSS (opcional, según estilos en las vistas)
 
-Estructura del Proyecto
-	-LogicaNegocio: Entidades y lógica de negocio.
-	-LogicaAccesoDatos: Repositorios y acceso a datos.
-	-LogicaAplicacion: Casos de uso y servicios de aplicación.
-	-ObligatorioP3: Proyecto web Razor Pages.
-	-ObligatorioWebApi: API RESTful para integración externa.
+Tecnologías utilizadas  
+	-.NET 8 / C# 12  
+	-ASP.NET Core Razor Pages  
+	-Entity Framework Core  
+	-Autenticación JWT (para la API)  
+	-Patrón Repository y Unit of Work  
+	-DTOs y AutoMapper  
+	-Tailwind CSS (opcional, según estilos en las vistas)    
 
-Cómo ejecutar
-1.	Clona el repositorio.
-2.	Configura la cadena de conexión en appsettings.json ().
-3.	Ejecuta las migraciones de la base de datos (si aplica).
-4.	Inicia el proyecto web (ObligatorioP3) desde Visual Studio 2022.
+Estructura del Proyecto  
+	-LogicaNegocio: Entidades y lógica de negocio.  
+	-LogicaAccesoDatos: Repositorios y acceso a datos.  
+	-LogicaAplicacion: Casos de uso y servicios de aplicación.  
+	-ObligatorioP3: Proyecto web Razor Pages.  
+	-ObligatorioWebApi: API RESTful para integración externa.  
+
+Cómo ejecutar  
+1.	Clona el repositorio.  
+2.	Configura la cadena de conexión en appsettings.json ().  
+3.	Ejecuta las migraciones de la base de datos (si aplica).  
+4.	Inicia el proyecto web (ObligatorioP3) desde Visual Studio 2022.  
