@@ -63,7 +63,7 @@ Características principales
 
 
 Tecnologías utilizadas  
-	-.NET 8 / C# 12  
+	-.NET 8 / C#  
 	-ASP.NET Core Razor Pages  
 	-Entity Framework Core  
 	-Autenticación JWT (para la API)  
