@@ -6,9 +6,7 @@ https://clientehttpp3lc-arbdffgba7fkg4ea.brazilsouth-01.azurewebsites.net/
 Url MVC Administradores / Funcionarios: 
 https://webappobligatoriop3lc-b4erb6athncsftf6.brazilsouth-01.azurewebsites.net/
 
-test users:
-
-Evita usar la funcionalidad cambiar password para que los demas puedan probar la app.
+TEST USERS:
 
 ADMIN
 Usuario: leomessi@gmail.com 
@@ -21,6 +19,8 @@ Password: sergioaguero1234
 CLIENTE
 Usuario: fernandomuslera@gmail.com 
 Password: fernandomuslera1234 
+
+(Evita usar la funcionalidad cambiar password para que los demas puedan probar la app.)
 
 Este proyecto es una aplicación web desarrollada en ASP.NET Core Razor Pages (.NET 8) que gestiona el proceso de envíos postales. Permite a los usuarios autenticados crear, listar, consultar, finalizar y realizar seguimientos de envíos, integrando funcionalidades de auditoría y control de acceso.
 
