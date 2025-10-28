@@ -22,7 +22,6 @@ CLIENTE
 Usuario: fernandomuslera@gmail.com 
 Password: fernandomuslera1234 
 
-Descripción del Proyecto
 Este proyecto es una aplicación web desarrollada en ASP.NET Core Razor Pages (.NET 8) que gestiona el proceso de envíos postales. Permite a los usuarios autenticados crear, listar, consultar, finalizar y realizar seguimientos de envíos, integrando funcionalidades de auditoría y control de acceso.
 
 Características principales
